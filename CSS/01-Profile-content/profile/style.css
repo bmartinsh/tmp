@@ -1,0 +1,31 @@
+h1, h2 {
+  color:#0D1F2D;
+  font-family: playball, monospace;
+  font-size: 1em !important;
+  line-height:10px ;
+}
+
+body {
+  background-color:#FAF4F0;
+  font-family:sans-serif;
+  color:#546A7B ;
+  font-size:1em;
+  line-height:120%;
+}
+
+li, .link-color {
+  color:#546A7B;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
