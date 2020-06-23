@@ -1,4 +1,11 @@
-h1, h2 {
+h1 {
+  color:#0D1F2D;
+  font-family: playball, monospace;
+  font-size: 40px !important;
+  line-height:10px ;
+}
+
+h2 {
   color:#0D1F2D;
   font-family: playball, monospace;
   font-size: 1em !important;
@@ -28,4 +35,34 @@ p {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.container {
+  width:700px;
+    margin:40px auto;
+}
+
+.card-white {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.img-circle{
+  width:100px;
+  height:100px;
+  border-radius:50%;
 }
