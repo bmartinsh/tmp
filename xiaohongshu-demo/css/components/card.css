@@ -1,0 +1,69 @@
+.card {
+  border-radius:6px;
+  overflow:hidden;
+  width:210px;
+  height:300px;
+  opacity: .9;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition:background 0.9s;
+}
+.card > img {
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+}
+.card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding-left:4px;
+  padding-right:2px;
+}
+.card p {
+  font-size: 10px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-infos-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  padding-right:4px;
+}
+
+.card-details-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right:4px;
+}
+
+.card-details-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right:4px;
+}
+
+.card:hover {
+  opacity:1;
+  background:#e5e5e5;
+}
+.card-details-right > a {
+  margin-right:4px;
+  color:#6d6a75;
+  opacity:2;
+}
+.card { /* Masonry bricks or child elements */
+  background-color: #eee;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+
