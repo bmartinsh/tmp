@@ -1,3 +1,5 @@
+/*Navbar is white, with a bow shadow at the bottom, this is a flexbox centered with
+a border at thhe bottom*/
 .navbar-minimalist {
   height: 70px;
   background: white;
@@ -7,6 +9,7 @@
   align-items: center;
   border-bottom:10px;
 }
+/*Nav bar image has been rounded */
 .navbar-minimalist img {
   width: 50px;
   height: 50px;

@@ -1,6 +1,54 @@
 /* TODO: design your flexbox layout with a sticky map */
 
-/* We just give you a Gmaps with random width/height */
+/* Map is 100vh, sticky on top with 0 on top and this is a flexbox */
 #map {
-  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display:flexbox;
+
+}
+/*Container is the content of the body less the navbar*/
+.container {
+  display:flex;
+}
+
+/*Cards are in a grid with 3 columns for full size before media queries, flex grow is activated
+a grip gap as well as a padding of 16px is set to have space*/
+.cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:16px;
+  padding:16px;
+}
+
+/*Media Queries Rules Small screen smartphones */
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Media queries for medium size screen : tablet */
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Media queries for large screen laptop */
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
 }
