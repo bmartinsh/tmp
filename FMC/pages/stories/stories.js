@@ -7,8 +7,14 @@ Page({
    * Page initial data
    */
   data: {
-    author: 'Benny B' ,
-    content: 'hello guys!'
+    stories: [
+      { content: "Building 1 MP is fun!!! FMC.", name: "Yinghui" },
+      { content: "Building 2 MP is fun!!! FMC.", name: "Craig" },
+      { content: "Building a MP is fun!!! FMC.", name: "Denis" },
+      { content: "Building a MP is fun!!! FMC.", name: "Ana" },
+      { content: "Building a MP is fun!!! FMC.", name: "Alex" },
+  
+    ]
   },
 
   clickMe: function () {
