@@ -1,0 +1,16 @@
+<!--pages/stories/stories.wxml-->
+<view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lewagon.com/api/v1/cities/shenzhen/cover?width=1200);">
+  <view class="container">
+    <h1>Stories</h1>
+    <button class="button-ghost" bindtap="clickMe">{{test}}</button>
+  </view>
+</view>
+
+
+
+  <view class="card-product">
+    <text class="h2">{{author}}</text>
+    <text class="p">{{content}}</text>
+  </view>
+
+

@@ -1,14 +1,19 @@
-// pages/landing.js
-const app = getApp()
+// pages/stories/stories.js
+
 Page({
+
 
   /**
    * Page initial data
    */
   data: {
-
+    author: 'Benny B' ,
+    content: 'hello guys!'
   },
 
+  clickMe: function () {
+    this.setData({ text: "Hello World" })
+  },
   /**
    * Lifecycle function--Called when page load
    */

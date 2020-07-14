@@ -3,7 +3,7 @@
   <view class="container">
     <h1>Welcome to FMC!</h1>
     <p>Share your funny stories here</p>
-    <a class="btn btn-flat" href="#">Submit</a>
+    <navigator class="btn btn-flat" url="/pages/stories/stories">Enter</navigator>
   </view>
 </view>
 
