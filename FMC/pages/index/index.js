@@ -3,34 +3,47 @@
 const app = getApp();
 
 Page({
+  setStories: function (data) {
+    // Save reference to page
+    let page = this;
+
+	// Take the stories from data passed in
+    const stories = data.stories;
+
+    // Update local stories data
+    page.setData({
+      stories: stories
+    });
+  },
+
+  getRequestData: function (res) {
+    console.log(res);
+
+    const data = res.data;
+    page.setStories(data);
+  },
 
   /**
    * Page initial data
    */
   data: {
-    
-    tagline: app.globalData.tagline
-
-  },
-
-  clickMe: function () {
-    this.setData({ text: "Hello World" })
-  },
-
-  switchToPosts: function() {
-    wx.switchTab({
-      url: '/pages/post/post',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+      // Save reference to page
+      let page = this;
+      //...
+      const request = {
+        url: `https://fml.shanghaiwogeng.com/api/v1/stories`,
+        method: 'GET', // If no method, default is GET
+        success: page.getRequestData
+      }
+      wx.request(request); 
+  
+
   },
 
   /**
@@ -45,13 +58,6 @@ Page({
    */
   onShow: function () {
 
-    let stories = wx.getStorageSync("stories") || []
-
-    console.log(stories)
-
-    this.setData({
-      stories: stories
-    })
 
   },
 

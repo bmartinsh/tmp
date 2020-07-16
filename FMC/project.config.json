@@ -4,33 +4,39 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
-		"scopeDataCheck": false,
-		"coverView": true,
+		"urlCheck": false,
 		"es6": true,
+		"enhance": false,
 		"postcss": true,
-		"compileHotReLoad": false,
 		"preloadBackgroundData": false,
 		"minified": true,
-		"autoAudits": false,
-		"newFeature": false,
-		"uglifyFileName": false,
-		"uploadWithSourceMap": true,
-		"useIsolateContext": true,
+		"newFeature": true,
+		"coverView": true,
 		"nodeModules": false,
-		"enhance": false,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"showShadowRootInWxmlPanel": true
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
+	"libVersion": "2.6.4",
 	"appid": "wx9974524d2ed37a13",
-	"projectname": "FML",
+	"projectname": "FMC",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"scripts": {},
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -48,7 +54,7 @@
 			"list": []
 		},
 		"game": {
-			"current": -1,
+			"currentL": -1,
 			"list": []
 		},
 		"gamePlugin": {
@@ -56,26 +62,33 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
-					"id": 0,
-					"name": "pages/landing",
-					"pathName": "pages/landing/landing",
+					"id": -1,
+					"name": "logs",
+					"pathName": "pages/logs/logs",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 1,
-					"name": "landing",
-					"pathName": "pages/landing/landing",
+					"name": "stories",
+					"pathName": "pages/stories/stories",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "index",
+					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/stories",
-					"pathName": "pages/stories/stories",
+					"name": "post",
+					"pathName": "pages/post/post",
 					"query": "",
 					"scene": null
 				}

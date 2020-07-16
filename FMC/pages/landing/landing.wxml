@@ -1,9 +1,15 @@
-<!--pages/landing.wxml-->
-<view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lewagon.com/api/v1/cities/shenzhen/cover?width=1200);">
+<!--pages/landing/landing.wxml-->
+
+<view class="banner" style="padding-top:20px; height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <view class="container">
-    <h1>Welcome to FMC!</h1>
-    <p>Share your funny stories here</p>
-    <navigator class="btn btn-flat" url="/pages/stories/stories">Enter</navigator>
+    <view class="h1">{{title}}</view>
+    <view class="p">{{description}}</view>
+    <!-- <button class="btn btn-flat" bindtap="gotoStories">
+      {{cta}}
+    </button> -->
+
+    <button class="btn btn-flat" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Begin now</button>
+
+
   </view>
 </view>
-

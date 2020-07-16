@@ -1,11 +1,38 @@
-// pages/landing.js
-const app = getApp()
+// pages/landing/landing.js
+
+const app = getApp();
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
+
+    title: "F*** my code",
+    description: "Share your horror stories when writing code at Le Wagon",
+    cta: "Start here"
+
+  },
+  getUserInfo: function (e) {
+
+    console.log(e)
+
+    // wx.getLocation({
+    //   success: function(res) {
+    //     console.log(res);
+    //   },
+    // })
+
+    app.globalData.userInfo = e.detail.userInfo
+
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+
+    wx.switchTab({
+      url: '/pages/stories/stories',
+    })
 
   },
 
@@ -14,12 +41,16 @@ Page({
    */
   onLoad: function (options) {
 
+    // console.log("Landing page is loading", Date.now())
+
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
+
+    // console.log("Landing page is Ready!!!", Date.now())
 
   },
 
@@ -28,12 +59,16 @@ Page({
    */
   onShow: function () {
 
+    // console.log("Landing page is SHOWING", Date.now())
+
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
   onHide: function () {
+
+    // console.log("Landing page is hidding....", Date.now())
 
   },
 
