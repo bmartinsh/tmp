@@ -9,8 +9,8 @@
 
 <view class="card-product">
   <view class="card-product-infos">
-    <view class="h2">{{stories.text}}</view>
-    <view class="p">{{stories.name}}</view>
+    <view class="h2">{{story.text}}</view>
+    <view class="p">{{story.name}}</view>
   </view>
 </view>
 

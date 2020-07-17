@@ -1,6 +1,5 @@
 // pages/stories/stories.js
-
-const app = getApp();
+let app = getApp()
 
 Page({
 
@@ -8,29 +7,15 @@ Page({
    * Page initial data
    */
   data: {
-    
-    tagline: app.globalData.tagline
-
+    stories: []
   },
 
-  clickMe: function () {
-    this.setData({ text: "Hello World" })
-  },
 
-  switchToPosts: function() {
-    wx.switchTab({
-      url: '/pages/post/post',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-  },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
   },
 
   /**
@@ -44,15 +29,9 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
-    let stories = wx.getStorageSync("stories") || []
-
-    console.log(stories)
-
     this.setData({
-      stories: stories
+      stories: app.globalData.stories
     })
-
   },
 
   /**

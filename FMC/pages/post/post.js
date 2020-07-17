@@ -1,47 +1,45 @@
 // pages/post/post.js
-
-const app = getApp();
-
+let app = getApp()
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    
-  },
-  formSubmit: function (event) {
 
+  },
+
+
+  formSubmit: function (event) {
+    // DID WE GET IT?
     console.log(event.detail.value.name)
     console.log(event.detail.value.content)
 
     let name = event.detail.value.name
     let content = event.detail.value.content
-
-    app.globalData.stories.unshift({content, name})
-
-    // STORING IN GLOBAL DATA
-
-    let stories = wx.getStorageSync("stories") || []
-
-    stories.unshift({content, name})
-
-    wx.setStorageSync('stories', stories)
-
-    // STORING IN CACHE
-
-    wx.switchTab({
-      url: '/pages/stories/stories',
-    })
-
+    debugger;
+    let story = {
+      name: name,
+      text: content
+    }
+    const request = {
+      url: `https://fml.shanghaiwogeng.com/api/v1/stories`,
+      method: 'POST',
+      data: story,
+      success() {
+        wx.navigateTo({
+          url: '/pages/index/index'
+        }); 
+        }
+      }
+      wx.request(request);
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(app.globalData.userInfo.nickName)
-    this.setData({userInfo: app.globalData.userInfo})
+
   },
 
   /**

@@ -1,10 +1,9 @@
 <!--pages/post/post.wxml-->
 
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <image src='{{userInfo.avatarUrl}}' class="avatar"/>
+<form bindsubmit="formSubmit">
   <view class="section">
     <view class="section__title">Name</view>
-    <input name="name" value="{{userInfo.nickName}}" placeholder="please your name here" />
+    <input name="name" placeholder="please your name here" />
   </view>
   
   <view class="section">

@@ -1,48 +1,17 @@
-// pages/stories/stories.js
-
-const app = getApp();
-
+// images/story/story.js
 Page({
-  setStories: function (data) {
-    // Save reference to page
-    let page = this;
-
-	// Take the stories from data passed in
-    const stories = data;
-
-    // Update local stories data
-    page.setData({
-      stories: stories
-    });
-  },
-
-  getRequestData: function (res) {
-    console.log(res);
-
-    const data = res.data;
-    this.setStories(data);
-  },
 
   /**
    * Page initial data
    */
   data: {
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-      // Save reference to page
-      let page = this;
-      //...
-      const request = {
-        url: `https://fml.shanghaiwogeng.com/api/v1/stories`,
-        method: 'GET', // If no method, default is GET
-        success: page.getRequestData
-      }
-      wx.request(request); 
-  
 
   },
 
@@ -57,7 +26,6 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
 
   },
 
