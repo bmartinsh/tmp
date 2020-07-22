@@ -1,6 +1,9 @@
 //app.js
 App({
   onLaunch: function () {
+    require('./sdk-wechat.3.12.0');
+    let clientID = '8c000387d70726e4ed93'  // 应用名称: Xiaoben' first MiniApp
+    wx.BaaS.init(clientID)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

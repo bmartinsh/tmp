@@ -9,7 +9,8 @@
     <textarea name="content" placeholder="please write your story here" ></textarea>
   </view>
 
-  <view class="btn-area">
-    <button formType="submit">Submit</button>
+  <view>
+    <button class="btn-flat" formType="submit">Submit</button>
   </view>
 </form>
+

@@ -10,11 +10,12 @@
   <view  class="card-product-infos">
     <view class="p">{{comment.content}}</view>
     <view class="p"> {{comment.name}}</view>
+    
     <view class="p" data-id="{{comment.id}}" data-votes="{{comment.votes}}" bindtap="voteComment" > votes: {{comment.votes}} </view>
     <view>
   <!-- other comment fields -->
-  <view class="p" data-id="{{comment.id}}" data-votes="{{comment.votes}}" bindtap="deVoteComment" >Devote !</view>
-</view>
+    <view class="p" data-id="{{comment.id}}" data-votes="{{comment.votes}}" bindtap="deVoteComment" >Devote !</view>
+    </view>
     <view data-id="{{comment.id}}" bindtap="deleteComment">X</view>
   </view>
   </view>
