@@ -36,16 +36,16 @@ Page({
     console.log(Story)
     
     // To uncomment to see all stories
-    // Story.find().then((res) => {
-    //   console.log('res', res);
-    //   this.setData({
-    //     stories: res.data.objects
+    Story.find().then((res) => {
+      console.log('res', res);
+      this.setData({
+        stories: res.data.objects
 
-        // Here to see one story with function GET
-        Story.get('5f16df23e1b0574b06eef6dc').then((res) => {
-          console.log('res', res);
-          this.setData({
-            stories: res.data.objects
+        // // Here to see one story with function GET
+        // Story.get('5f16df23e1b0574b06eef6dc').then((res) => {
+        //   console.log('res', res);
+        //   this.setData({
+        //     stories: res.data.objects
 
       })
     })
