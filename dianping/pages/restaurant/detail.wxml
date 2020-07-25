@@ -1,0 +1,23 @@
+<!--pages/restaurant/detail.wxml-->
+
+  <view class="card-product-infos">
+    <image src="{{resto.photo}}"/>
+    <view class="h2">{{resto.name}}</view>
+    <view class="p">{{resto.description}}</view>
+  </view>
+
+<view wx:for="{{reviews}}" wx:key="index" wx:for-item="review" class="card-product">
+  <view  class="card-product-infos">
+    <text> </text>
+    <view class="p">{{review.content}}</view>
+
+    
+
+  <!-- other
+    <view class="p" data-id="{{comment.id}}" data-votes="{{reviews.votes}}" bindtap="voteComment" > votes: {{reviews.rating}} </view>
+
+   comment fields -->
+       <view>
+    </view>
+  </view>
+  </view>
