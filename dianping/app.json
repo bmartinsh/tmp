@@ -21,23 +21,6 @@
     }
   },
 
-  "tabBar": {
-    
-    "list": [
-      {
-        "pagePath": "pages/profile/index",
-        "iconPath": "pages/icons/home.png",
-        "selectedIconPath": "pages/icons/home.png"
- 
-      },
-      {
-      "pagePath": "pages/index/index",
-      "iconPath": "pages/icons/resto.png",
-      "selectedIconPath": "pages/icons/resto.png"
-
-    } ]
-  },
-
   "style": "v2",
   "sitemapLocation": "sitemap.json"
   
