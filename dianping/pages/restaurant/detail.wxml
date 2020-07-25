@@ -1,23 +1,28 @@
 <!--pages/restaurant/detail.wxml-->
 
-  <view class="card-product-infos">
+<!-- <button bindtap="showUserPage" class="section" wx:else>
+  Please Log In to Review
+</button> -->
+
+  <view class="card-product">
     <image src="{{resto.photo}}"/>
     <view class="h2">{{resto.name}}</view>
     <view class="p">{{resto.description}}</view>
   </view>
 
 <view wx:for="{{reviews}}" wx:key="index" wx:for-item="review" class="card-product">
-  <view  class="card-product-infos">
-    <text> </text>
-    <view class="p">{{review.content}}</view>
-
-    
-
-  <!-- other
-    <view class="p" data-id="{{comment.id}}" data-votes="{{reviews.votes}}" bindtap="voteComment" > votes: {{reviews.rating}} </view>
-
-   comment fields -->
-       <view>
+    <view  class="card-product-infos">
+      <view class="p">Inspiring input : {{review.content}}</view>
+      <view class="p">Rating : {{review.rating}}</view>
     </view>
+    </view>
+<form bindsubmit="createReview" wx:if="{{currentUser}}">
+  <view class="section">
+    <input class="p" name="content" placeholder="put down your thoughts"/>
+    <picker class="p" mode="selector" range="{{ [1, 2, 3, 4, 5] }}" bindchange="onRate">Pick up your resto's rating  {{rating}}    </picker>
   </view>
-  </view>
+  <button formType="submit" class="footer-btn">Submit</button>
+</form>
+    <view wx:else>
+        <button type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login to Review</button>
+    </view>

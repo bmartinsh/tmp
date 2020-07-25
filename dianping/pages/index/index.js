@@ -26,5 +26,15 @@ Page({
       url: `/pages/restaurant/detail?id=${id}` 
     })
   },
-  
+  userInfoHandler(data) {
+    wx.BaaS.auth.loginWithWechat(data).then(user => {
+        app.globalData.userInfo = user;
+        this.setData({
+          currentUser: user,
+        })
+      }, err => {
+
+    })
+  },
+
 })
