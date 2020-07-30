@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="topbanner" >
+    <view class="banner" style="margin-bottom: 10px ; padding:70px 10px; background-color: white; background-size: cover ; ">
+      <view style="color:black"> Welcome back {{currentUser.nickname}} !</view>
+       <view style="color:black"> Points : To be completed</view>
+      <view class="h1"></view>
+    </view>
+</view>
+
+<view wx:for="{{restaurants}}" wx:key="index" wx:for-item="resto" class="card-product">
+    <image bindtap="showResto" src="{{resto.photo}}"/>
+  <view class="card-product-infos">
+    <view data-id="{{resto.id}}" bindtap="showResto" class="h2">{{resto.name}}</view>
+    <view data-id="{{resto.id}}" bindtap="showResto" class="p">{{resto.description}}</view>
+  </view>
+</view>

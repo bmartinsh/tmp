@@ -1,0 +1,9 @@
+<!--pages/profile/index.wxml-->
+
+<view class="topbanner" >
+    <view class="banner" style="margin-bottom:10 px; padding:70px 10px; background-image: url(/pages/profile/resto_door.png); background-size: cover ; ">
+      <!-- <view class="h1"></view> -->
+    </view>
+</view>
+
+<button class="btn-flat" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">WeChat Login</button>
